@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <title>Exercise 2</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title></title>
 </head>
 <body>
-    <center>
-        <h1>Kalkulator</h1>
-    </center>
+    <form name="cal">
+    <table border="2">
+        <tr>
+            <td>
+                <input type="text" name="tampil" id="tampil">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" name="clear" id="clear" value="c" onclick="cal.tampil.value = ''">
+                <input type="button" name="mod" id="mod" value="%" onclick="cal.tampil.value += '%'">
+                <input type="button" name="kurang" id="kurang" value="-" onclick="cal.tampil.value += '-'">
+                <input type="button" name="tambah" id="tambah" value="+" onclick="cal.tampil.value += '+'">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" name="tujuh" id="tujuh" value="7" onclick="cal.tampil.value += '7'">
+                <input type="button" name="delapan" id="delapan" value="8" onclick="cal.tampil.value += '8'">
+                <input type="button" name="sembilan" id="sembilan" value="9" onclick="cal.tampil.value += '9'">
+                <input type="button" name="kali" id="kali" value="*" onclick="cal.tampil.value += '*'">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" name="tujuh" id="empat" value="4" onclick="cal.tampil.value += '4'">
+                <input type="button" name="delapan" id="lima" value="5" onclick="cal.tampil.value += '5'">
+                <input type="button" name="sembilan" id="enam" value="6" onclick="cal.tampil.value += '6'">
+                <input type="button" name="bagi" id="bagi" value="/" onclick="cal.tampil.value += '/'">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" name="tujuh" id="satu" value="1" onclick="cal.tampil.value += '1'">
+                <input type="button" name="delapan" id="dua" value="2" onclick="cal.tampil.value += '2'">
+                <input type="button" name="sembilan" id="tiga" value="3" onclick="cal.tampil.value += '3'">
+                <input type="button" name="hasil" id="hasil" value=" = ">
+            </td>
+        </tr>
+    </table>
+    </form>
+    <tr>
+        <td><h1>Hasilnya adalah <span id="result"></span></td>
+    </tr>
 </body>
+<script>
+    var buttonHasil = document.getElementById('hasil');
+    var tampil = document.getElementById('tampil');
+    var akhir = parseInt(tampil);
+
+    buttonHasil.onclick = function(){
+        var result = eval(tampil.value);
+    document.querySelector('#result').innerHTML = ' '+result;
+    }
+</script>
 </html>
