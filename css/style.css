@@ -1,0 +1,45 @@
+body{
+	background: #003333;
+}
+
+h1{
+	text-align: center;
+	font-weight: 300;
+	color: white;
+	text-shadow: 2px 2px 8px black;
+}
+
+.container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+input{
+	font-size: 15px;
+}
+
+table{
+	text-align: center;
+	background: #004444;
+	width: 250px;
+	height: 200px;
+	border-radius: 20px;
+	box-shadow: 2px 2px 8px black;
+
+}
+
+.tombol{
+	background: #007777;
+	color: white;
+	text-align: center;
+	font-size: 11pt;
+	width: 40px;
+	height: 20px;
+	border: none;
+	border-radius: 3px;
+}
+
+.tampil{
+	text-align: right;
+}
